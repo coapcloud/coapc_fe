@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with GCC",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "server.c",
+                "-I",
+                "/usr/local/include/coap/",
+                "-lcoap-2",
+                "-O2",
+                "-D_GNU_SOURCEX",
+                "-DWITH_POSI",
+                "-g",
+                "-o",
+                "server",
+                "-v"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

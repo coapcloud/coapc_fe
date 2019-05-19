@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "coap.h": "c",
+        "dirent.h": "c"
+    }
+}
