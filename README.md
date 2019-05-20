@@ -2,19 +2,19 @@
 
 ----
 
-`coapc_fe` is the frontend server frontend server for CoAP.cloud and handles parsing requests and responses and routes logic to microservices. In the future it may support advanced use cases, like HTTP and other forms of proxying.
+`coapc_fe` is the frontend server for CoAP.cloud. It handles parsing CoAP requests/responses and routes logic to microservice backends. In the future it may support advanced use cases, like HTTP and other forms of proxying.
 
 ----
 
 ## Prerequisites
 
-`coapc_fe` is based on [libcoap](https://github.com/obgm/libcoap) and has its own set of dependencies. Most POSIX should work and Windows _may_ work. macOS users - Brew is your friend. To build `libcoap`:
+`coapc_fe` is based on [libcoap](https://github.com/obgm/libcoap), which includes its own set of dependencies. Most POSIX hosts should work and Windows _may_ work. macOS users - Brew is your friend. To build `libcoap`:
 
 * `git clone https://github.com/coapcloud/coapc_fe` (this repo)
 
 * `cd coapc_fe`
 
-* `git submodule update --init --recursive` to fetch `libcoap`'s dependencies
+* `git submodule update --init --recursive` to fetch dependencies
 
 * `./autogen.sh`
 
