@@ -56,6 +56,14 @@ hnd_get_index(coap_context_t *ctx UNUSED_PARAM,
               coap_string_t *query UNUSED_PARAM,
               coap_pdu_t *response)
 {
+    coap_opt_iterator_t oi;
+    coap_opt_t *uri_host;
+    unsigned char *uh;
+
+    uri_host = coap_check_option(request, COAP_OPTION_URI_HOST, &oi);
+    printf("uri host %s\n", coap_opt_value(uri_host));
+    uh = (uint8_t *)coap_opt_value(uri_host);
+    printf("subdomain %s\n", strtok((char *)uh, "."));
 
     coap_add_data_blocked_response(resource, session, request, response, token,
                                    COAP_MEDIATYPE_TEXT_PLAIN, 0x2ffff,
